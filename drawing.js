@@ -46,7 +46,10 @@ function drawReflectedLaser() {
     let y = - dimensions.r * Math.cos(params.angle);
     
     removeElement('laser-line-reflected');
+    removeElement('laser-line-reflected-dotted');
     document.getElementById('drawing-area').innerHTML += `<line x1="${dimensions.center.x}" y1="${dimensions.center.y}" x2="${dimensions.center.x + x}" y2="${dimensions.center.y + y}" stroke-opacity="${intensity.R}" stroke="red" id="laser-line-reflected" stroke-width="3" />`;
+    if (intensity.R > 0.001)
+    document.getElementById('drawing-area').innerHTML += `<line x1="${dimensions.center.x}" y1="${dimensions.center.y}" x2="${dimensions.center.x + x}" y2="${dimensions.center.y + y}" stroke="red" id="laser-line-reflected-dotted" stroke-width="2" stroke-dasharray="1 10" />`;
 }
 
 function drawRefractedLaser() {
