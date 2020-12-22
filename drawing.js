@@ -2,14 +2,13 @@ function drawAxes(){
     let drawingArea = document.getElementById('drawing-area');
     let w = drawingArea.getAttribute('width');
     let h = drawingArea.getAttribute('height');
-    console.log(`svg dimensions: w = ${w}, h = ${h}`);
     document.getElementById('drawing-area').innerHTML += `<line x1="0" y1="${h/2}" x2="${w}" y2="${h/2}" stroke="black"/>`;
     document.getElementById('drawing-area').innerHTML += `<line x1="${w/2}" y1="${h/2 - h/5}" x2="${w/2}" y2="${h/2 + h/5}" stroke="black" stroke-dasharray="4" />`;
 }
 
 function drawLaser() {
     drawInitialLaser();
-    calculateIntensity();
+    //calculateIntensity();
     drawReflectedLaser();
     drawRefractedLaser();
     drawEmitter();
@@ -37,8 +36,8 @@ function calculateIntensity() {
     let nLowerTimesCosUpper = params.RefractionIndexLower * cosUpper;
     let Rp = Math.pow((nUpperTimesCosLower - nLowerTimesCosUpper) / (nUpperTimesCosLower + nLowerTimesCosUpper), 2);
 
-    intensity.R = 0.5 * (Rs + Rp);
-    intensity.T = 1 - intensity.R;
+    intensity.R = 0.5 * (Rs + Rp);  //wypadkowy wspolczynnik odbicia materialu liczony z rownan Fresnela
+    intensity.T = 1 - intensity.R;  //wypadkowy wspolczynnik przepuszczania mocy
 }
 
 function drawReflectedLaser() {
