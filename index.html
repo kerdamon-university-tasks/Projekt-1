@@ -11,70 +11,74 @@
 </head>
 
 <body>
-  <p class="title">Odbicie - załamanie światła</p>
-  <table id="main-table">
-    <tr>
-      <td>
-        <table id="slider-container">
-          <tr>
-            <th><label for="angle-slider">Kąt (stopnie)</label></th>
-          </tr>
-          <tr>
-            <td>
-              <p id="angle-text">50</p>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="range" min="0" max="90" value="50" name="angle-slider" id="angle-slider"
-                oninput="refresh()"></td>
-          </tr>
-          <tr>
-            <th><label for="refract-upper-slider">Współczynnik załamania (górny ośrodek)</label></th>
-          </tr>
-          <tr>
-            <td>
-              <p id="refract-upper-text"></p>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="range" min="100" max="160" value="100" name="refract-upper-slider"
-                id="refract-upper-slider" oninput="refresh()"></td>
-          </tr>
-          <tr>
-            <th><label for="refract-lower-slider">Współczynnik załamania (dolny ośrodek)</label></th>
-          </tr>
-          <tr>
-            <td>
-              <p id="refract-lower-text"></p>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="range" min="100" max="160" value="133" name="refract-lower-slider"
-                id="refract-lower-slider" oninput="refresh()"></td>
-          </tr>
-        </table>
-      </td>
-      <td>
-        <svg width="600" height="400" id="drawing-area"></svg>
-      </td>
-      <td>
-        <table id="info">
-          <tr>
-            <td>
-              <p>Natężenie światła (górny ośrodek):</p>
-              <p id="info-upper-intensity"></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Natężenie światła (dolny ośrodek):</p>
-              <p id="info-lower-intensity"></p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+  <header>
+    <p>Odbicie - załamanie światła</p>
+  </header>
+  <article>
+    <table id="main-table">
+      <tr>
+        <td>
+          <table id="slider-container">
+            <tr>
+              <th><label for="angle-slider">Kąt (stopnie)</label></th>
+            </tr>
+            <tr>
+              <td>
+                <p id="angle-text">50</p>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="range" min="0" max="90" value="50" name="angle-slider" id="angle-slider"
+                  oninput="refresh()"></td>
+            </tr>
+            <tr>
+              <th><label for="refract-upper-slider">Współczynnik załamania (górny ośrodek)</label></th>
+            </tr>
+            <tr>
+              <td>
+                <p id="refract-upper-text"></p>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="range" min="100" max="160" value="100" name="refract-upper-slider"
+                  id="refract-upper-slider" oninput="refresh()"></td>
+            </tr>
+            <tr>
+              <th><label for="refract-lower-slider">Współczynnik załamania (dolny ośrodek)</label></th>
+            </tr>
+            <tr>
+              <td>
+                <p id="refract-lower-text"></p>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="range" min="100" max="160" value="133" name="refract-lower-slider"
+                  id="refract-lower-slider" oninput="refresh()"></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <svg width="450" height="330" id="drawing-area"></svg>
+        </td>
+        <td>
+          <table id="info">
+            <tr>
+              <td>
+                <p>Natężenie światła (górny ośrodek)</p>
+                <p id="info-upper-intensity"></p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Natężenie światła (dolny ośrodek)</p>
+                <p id="info-lower-intensity"></p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </article>
 </body>
 
 </html>

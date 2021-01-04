@@ -8,7 +8,6 @@ function drawAxes(){
 
 function drawLaser() {
     drawInitialLaser();
-    //calculateIntensity();
     drawReflectedLaser();
     drawRefractedLaser();
     drawEmitter();
