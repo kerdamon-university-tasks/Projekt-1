@@ -38,7 +38,7 @@ header {
     padding: 1px 0 1px 0;
     text-align: center;
     color: whitesmoke;
-    background-color: saddlebrown;
+    background-color: rgb(129, 93, 68);
 }
 
 #intensity {
@@ -57,7 +57,7 @@ footer{
     padding: 1px 0 1px 0;
     text-align: center;
     color: whitesmoke;
-    background-color: saddlebrown;
+    background-color: rgb(129, 93, 68);
 
 }
 
