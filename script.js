@@ -35,7 +35,7 @@ function updateInfo() {
     if(params.cosRefr > 0){
         document.getElementById('upper-intensity').innerHTML = (intensity.R * 100).toFixed(2) + ' %';
         document.getElementById('lower-intensity').innerHTML = (intensity.T * 100).toFixed(2) + ' %';
-        document.getElementById('info').innerHTML = '';
+        document.getElementById('info').innerHTML = '<br/>';
     }
     else {
         document.getElementById('upper-intensity').innerHTML = '100 %';

@@ -52,3 +52,16 @@ header {
     text-align: center;
     padding: 10px;
 }
+
+footer{
+    padding: 1px 0 1px 0;
+    text-align: center;
+    color: whitesmoke;
+    background-color: saddlebrown;
+
+}
+
+footer .description{
+    text-align: justify;
+    padding: 0 15% 0 15%;
+}
