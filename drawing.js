@@ -23,22 +23,6 @@ function drawInitialLaser() {
     document.getElementById('drawing-area').innerHTML += `<line x1="${dimensions.center.x + dimensions.emitter.x}" y1="${dimensions.center.y + dimensions.emitter.y}" x2="${dimensions.center.x}" y2="${dimensions.center.y}" stroke="red" id="laser-line" stroke-width="3" />`;
 }
 
-function calculateIntensity() {
-    let cosUpper = Math.cos(params.angle);
-    let cosLower = Math.sqrt(1 - Math.pow((params.RefractionIndexUpper / params.RefractionIndexLower * Math.sin(params.angle)), 2));
-
-    let nUpperTimesCosUpper = params.RefractionIndexUpper * cosUpper;
-    let nLowerTimesCosLower = params.RefractionIndexLower * cosLower;
-    let Rs = Math.pow((nUpperTimesCosUpper - nLowerTimesCosLower) / (nUpperTimesCosUpper + nLowerTimesCosLower), 2);
-
-    let nUpperTimesCosLower = params.RefractionIndexUpper * cosLower;
-    let nLowerTimesCosUpper = params.RefractionIndexLower * cosUpper;
-    let Rp = Math.pow((nUpperTimesCosLower - nLowerTimesCosUpper) / (nUpperTimesCosLower + nLowerTimesCosUpper), 2);
-
-    intensity.R = 0.5 * (Rs + Rp);  //wypadkowy wspolczynnik odbicia materialu liczony z rownan Fresnela
-    intensity.T = 1 - intensity.R;  //wypadkowy wspolczynnik przepuszczania mocy
-}
-
 function drawReflectedLaser() {
     let x = dimensions.r * Math.sin(params.angle);
     let y = - dimensions.r * Math.cos(params.angle);

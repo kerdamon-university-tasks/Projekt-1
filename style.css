@@ -16,19 +16,22 @@ body {
 }
 
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
 }
 
-#slider-container, #info{
+#slider-container, #intensity{
     -webkit-box-shadow: 6px 8px 15px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 8px 15px 0px rgba(0,0,0,0.75);
     box-shadow: 6px 8px 15px 0px rgba(0,0,0,0.75);
     margin: 10px;
+    border-spacing: 5px;
+    border: solid;
+    border-color: brown;
+    background-color: #fffcf1;
 }
 
 td {
     text-align: center;
-    padding: 5px;
 }
 
 header {
@@ -38,6 +41,14 @@ header {
     background-color: saddlebrown;
 }
 
-#info {
+#intensity {
     height: 330px;
+}
+
+#info {
+    color: darkred;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    padding: 10px;
 }

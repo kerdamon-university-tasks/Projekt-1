@@ -30,8 +30,8 @@ function updateFromSliderValues(){
 }
 
 function updateInfo() {
-    document.getElementById('info-upper-intensity').innerHTML = (intensity.R * 100).toFixed(2) + " %";
-    document.getElementById('info-lower-intensity').innerHTML = (intensity.T * 100).toFixed(2) + " %";
+    document.getElementById('upper-intensity').innerHTML = (intensity.R * 100).toFixed(2) + " %";
+    document.getElementById('lower-intensity').innerHTML = (intensity.T * 100).toFixed(2) + " %";
 }
 
 function updateRelativeCoordinates() {
