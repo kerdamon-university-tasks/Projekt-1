@@ -47,8 +47,6 @@ header {
 
 #info {
     color: darkred;
-    font-weight: bold;
-    font-size: larger;
     text-align: center;
     padding: 10px;
 }
@@ -64,4 +62,9 @@ footer{
 footer .description{
     text-align: justify;
     padding: 0 15% 0 15%;
+}
+
+article h2{
+    text-align: center;
+    color: rgb(105, 68, 42);
 }
