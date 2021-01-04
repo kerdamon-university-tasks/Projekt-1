@@ -35,11 +35,8 @@ function drawReflectedLaser() {
 }
 
 function drawRefractedLaser() {
-    let sinRefr = params.RefractionIndexUpper * Math.sin(params.angle) / params.RefractionIndexLower;   // z prawa Snella
-    let cosRefr = Math.sqrt(1 - Math.pow(sinRefr, 2));                                                  // z jedynki trygonometrycznej
-
-    let x = dimensions.r * sinRefr;
-    let y = dimensions.r * cosRefr;
+    let x = dimensions.r * params.sinRefr;
+    let y = dimensions.r * params.cosRefr;
     
     removeElement('laser-line-refracted');
     if( y > 0)

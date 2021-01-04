@@ -15,9 +15,14 @@ this.addEventListener('message', function(e) {
     let r = 0.5 * (Rs + Rp);  //wypadkowy wspolczynnik odbicia materialu liczony z rownan Fresnela
     let t = 1 - r;  //wypadkowy wspolczynnik przepuszczania mocy
 
+    let sinRefr = parameters.RefractionIndexUpper * Math.sin(parameters.angle) / parameters.RefractionIndexLower;   // z prawa Snella
+    let cosRefr = Math.sqrt(1 - Math.pow(sinRefr, 2));  // z jedynki trygonometrycznej
+
     result = {
         R: r,
-        T: t
+        T: t,
+        sinRefr,
+        cosRefr
     }
 
     //mySleep();

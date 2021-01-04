@@ -3,6 +3,8 @@ let calculationWorker = new Worker('calculations.js');
 calculationWorker.addEventListener('message', function(e) {
     intensity.R = e.data.R;
     intensity.T = e.data.T;
+    params.sinRefr = e.data.sinRefr;
+    params.cosRefr = e.data.cosRefr;
     drawLaser();
     updateInfo();
 }, false);
@@ -30,8 +32,16 @@ function updateFromSliderValues(){
 }
 
 function updateInfo() {
-    document.getElementById('upper-intensity').innerHTML = (intensity.R * 100).toFixed(2) + " %";
-    document.getElementById('lower-intensity').innerHTML = (intensity.T * 100).toFixed(2) + " %";
+    if(params.cosRefr > 0){
+        document.getElementById('upper-intensity').innerHTML = (intensity.R * 100).toFixed(2) + ' %';
+        document.getElementById('lower-intensity').innerHTML = (intensity.T * 100).toFixed(2) + ' %';
+        document.getElementById('info').innerHTML = '';
+    }
+    else {
+        document.getElementById('upper-intensity').innerHTML = '100 %';
+        document.getElementById('lower-intensity').innerHTML = '0 %';
+        document.getElementById('info').innerHTML = 'Całkowite wewnętrzne odbicie';
+    }
 }
 
 function updateRelativeCoordinates() {

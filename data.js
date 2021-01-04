@@ -1,7 +1,9 @@
 const params = {
     angle: 45,
     RefractionIndexUpper: 100,
-    RefractionIndexLower: 133
+    RefractionIndexLower: 133,
+    sinRefr: 1,
+    cosRefr: 1
 }
 
 const dimensions = {
